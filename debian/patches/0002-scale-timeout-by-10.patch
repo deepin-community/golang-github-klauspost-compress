@@ -1,0 +1,24 @@
+From: Shengjing Zhu <zhsj@debian.org>
+Date: Mon, 16 Jan 2023 11:45:25 +0800
+Subject: scale timeout by 10
+
+We have slow arch to support like armhf/armel
+
+Forwarded: no-needed
+---
+ zstd/decoder_test.go | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Index: compress-1.17.0/zstd/decoder_test.go
+===================================================================
+--- compress-1.17.0.orig/zstd/decoder_test.go
++++ compress-1.17.0/zstd/decoder_test.go
+@@ -2148,7 +2148,7 @@ func timeout(after time.Duration) (cance
+ 	if isRaceTest {
+ 		return func() {}
+ 	}
+-	c := time.After(after)
++	c := time.After(after * 10)
+ 	cc := make(chan struct{})
+ 	go func() {
+ 		select {
