@@ -1,4 +1,19 @@
 #!/usr/bin/make -f
 
+export DH_GOLANG_GO_GENERATE := 1
+export DH_GOLANG_EXCLUDES := s2/cmd
+
+# Ubuntu mangles png files by default, which can break the testdata.
+export NO_PNG_PKG_MANGLE := 1
+
 %:
-	dh $@
+	dh $@ --buildsystem=golang --with=golang --builddirectory=_build
+
+override_dh_auto_test:
+	dh_auto_test --no-parallel -- -timeout 1h
+
+override_dh_auto_install:
+	dh_auto_install -- --no-binaries
+
+override_dh_strip_nondeterminism:
+	dh_strip_nondeterminism -X/testdata/

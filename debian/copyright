@@ -1,22 +1,353 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: template-repository
-Source: https://github.com/deepin-community/template-repository
+Upstream-Name: compress
+Source: https://github.com/klauspost/compress
+Files-Excluded:
+ zstd/internal/xxhash
 
 Files: *
-Copyright: 2023 Tsic404 <liuheng@deepin.org>
-License: GPL-2+
- This package is free software; you can redistribute it and/or modify
- it under the terms of the GNU General Public License as published by
- the Free Software Foundation; either version 2 of the License, or
- (at your option) any later version.
+Copyright:
+    2009-2012 The Go Authors
+    2019      Klaus Post
+ 2019, Klaus Post.
+  2012, The Go Authors.
+License: BSD-3-Clause or BSD-3-clause
+
+Files: README.md
+  compressible.go
+  compressible_test.go
+  go.mod
+Copyright:
+    2009-2012 The Go Authors
+    2019      Klaus Post
+License: BSD-3-Clause
+Comment: This code is licensed under the same conditions as the
+ original Go code.
+
+Files: debian/*
+Copyright: 2015, Alexandre Viau <aviau@debian.org>
+License: BSD-3-Clause
+Comment: Debian packaging is licensed under the same terms as upstream
+
+Files: flate/*
+Copyright: 2009-2012, 2014, 2016, The Go Authors.
+License: BSD-3-Clause
+
+Files: flate/deflate.go
+  flate/deflate_test.go
+Copyright: 2015, Klaus Post
+  2009, The Go Authors.
+License: BSD-3-Clause
+
+Files: flate/fast_encoder.go
+Copyright: 2015
+  2011, The Snappy-Go Authors.
+License: BSD-3-Clause
+
+Files: flate/_gen/gen_inflate.go
+  flate/inflate_gen.go
+  flate/level1.go
+  flate/level2.go
+  flate/level3.go
+  flate/level4.go
+  flate/level5.go
+  flate/level6.go
+  flate/regmask_amd64.go
+  flate/regmask_other.go
+  flate/stateless.go
+  flate/token_test.go
+Copyright:
+    2009-2014 The Go Authors
+    2015      Klaus Post
+License: BSD-3-Clause
+
+Files: flate/testdata/*
+Copyright:
+    2009-2014 The Go Authors
+    2015      Klaus Post
+License: BSD-3-Clause
+
+Files: flate/testdata/huffman-rand-1k.in
+  flate/testdata/huffman-rand-max.in
+Copyright: éà¢
+License: BSD-3-Clause
+
+Files: flate/testdata/huffman-rand-limit.in
+Copyright: ¼-#¾Ùíu
+License: BSD-3-Clause
+
+Files: flate/testdata/huffman-text-shift.in
+Copyright: 2009, ThGoAuthor.Allrightrrvd.
+License: BSD-3-Clause
+
+Files: flate/testdata/huffman-text.in
+Copyright: 2009-2012, 2014, 2016, The Go Authors.
+License: BSD-3-Clause
+
+Files: fse/*
+Copyright:
+    2009-2012 The Go Authors
+    2019      Klaus Post
+License: BSD-3-Clause
+Comment: This code is licensed under the same conditions as the
+ original Go code.
+
+Files: fse/bitreader.go
+  fse/bitwriter.go
+  fse/bytereader.go
+  fse/compress.go
+  fse/fse.go
+  fse/fse_test.go
+Copyright: 2018, Klaus Post.
+  2013, Yann Collet, released under BSD License.
+License: BSD-3-Clause
+Comment: This code is licensed under the same conditions as the
+ original Go code.
+
+Files: gzip/*
+Copyright: 2009-2012, 2014, 2016, The Go Authors.
+License: BSD-3-Clause
+Comment: This code is licensed under the same conditions as the
+ original Go code.
+
+Files: huff0/*
+Copyright:
+    2009-2012 The Go Authors
+    2019      Klaus Post
+License: BSD-3-Clause
+Comment: This code is licensed under the same conditions as the
+ original Go code.
+
+Files: huff0/bitreader.go
+  huff0/bitwriter.go
+  huff0/bytereader.go
+Copyright: 2018, Klaus Post.
+  2013, Yann Collet, released under BSD License.
+License: BSD-3-Clause
+Comment: This code is licensed under the same conditions as the
+ original Go code.
+
+Files: s2/*
+Copyright:
+    2011-2016 The Snappy-Go Authors
+    2015-2019 Klaus Post
+ 2019, Klaus Post.
+  2011, The Snappy-Go Authors.
+License: BSD-3-Clause or BSD-3-clause
+
+Files: s2/README.md
+  s2/encode_go.go
+  s2/encodeblock_amd64.go
+Copyright:
+    2011-2016 The Snappy-Go Authors
+    2015-2019 Klaus Post
+License: BSD-3-Clause
+
+Files: s2/_generate/*
+Copyright:
+    2011-2016 The Snappy-Go Authors
+    2015-2019 Klaus Post
+License: BSD-3-Clause
+
+Files: s2/cmd/*
+Copyright: 2011, 2016, The Snappy-Go Authors.
+License: BSD-3-Clause
+
+Files: s2/cmd/internal/*
+Copyright:
+    2011-2016 The Snappy-Go Authors
+    2015-2019 Klaus Post
+ 2015, Klaus Post
+License: Expat
+
+Files: s2/cmd/internal/readahead/README.md
+Copyright:
+    2011-2016 The Snappy-Go Authors
+    2015-2019 Klaus Post
+License: Expat
+
+Files: s2/cmd/internal/readahead/reader.go
+Copyright: 2015, Klaus Post, released under MIT License. See LICENSE file.
+License: Expat
+
+Files: s2/cmd/s2d/*
+Copyright: 2019, Klaus Post.
+  2011, 2016, The Snappy-Go Authors.
+License: BSD-3-Clause
+
+Files: s2/decode.go
+  s2/decode_other.go
+  s2/encode.go
+  s2/encode_all.go
+  s2/encode_better.go
+  s2/s2.go
+  s2/s2_test.go
+Copyright: 2019, Klaus Post.
+  2011, 2016, The Snappy-Go Authors.
+License: BSD-3-Clause
+
+Files: s2/decode_test.go
+  s2/encode_test.go
+Copyright: 2019, Klaus Post.
+License: BSD-3-Clause
+
+Files: s2/testdata/*
+Copyright: þ¼4+D
+License: BSD-3-Clause
+
+Files: snappy/*
+Copyright:
+    2011-2016 The Snappy-Go Authors
+    2015-2019 Klaus Post
+ 2011, The Snappy-Go Authors.
+License: BSD-3-Clause or BSD-3-clause
+
+Files: snappy/decode.go
+  snappy/encode.go
+  snappy/snappy.go
+  snappy/snappy_test.go
+Copyright: 2011, 2016, The Snappy-Go Authors.
+License: BSD-3-Clause
+
+Files: snappy/testdata/*
+Copyright:
+    2011-2016 The Snappy-Go Authors
+    2015-2019 Klaus Post
+License: BSD-3-Clause
+
+Files: zip/*
+Copyright: 2009-2012, 2014, 2016, The Go Authors.
+License: BSD-3-Clause
+Comment: This code is licensed under the same conditions as the
+ original Go code.
+
+Files: zlib/*
+Copyright: 2009-2012, 2014, 2016, The Go Authors.
+License: BSD-3-Clause
+Comment: This code is licensed under the same conditions as the
+ original Go code.
+
+Files: zstd/*
+Copyright: 2016, Caleb Spare.
+License: BSD-3-Clause
+Comment: This code is licensed under the same conditions as the
+ original Go code.
+
+Files: zstd/bitreader.go
+  zstd/blockdec.go
+  zstd/blockenc.go
+  zstd/bytebuf.go
+  zstd/bytereader.go
+  zstd/decoder.go
+  zstd/decoder_options.go
+  zstd/decoder_test.go
+  zstd/enc_better.go
+  zstd/enc_dfast.go
+  zstd/enc_fast.go
+  zstd/encoder.go
+  zstd/encoder_test.go
+  zstd/framedec.go
+  zstd/frameenc.go
+  zstd/fse_decoder.go
+  zstd/fse_encoder.go
+  zstd/fse_predefined.go
+  zstd/hash.go
+  zstd/history.go
+  zstd/seqdec.go
+  zstd/seqenc.go
+  zstd/snappy.go
+Copyright: 2019
+License: BSD-3-Clause
+Comment: This code is licensed under the same conditions as the
+ original Go code.
+
+Files: zstd/bitwriter.go
+Copyright: 2018, Klaus Post.
+  2013, Yann Collet, released under BSD License.
+License: BSD-3-Clause
+Comment: This code is licensed under the same conditions as the
+ original Go code.
+
+Files: zstd/blocktype_string.go
+  zstd/dict.go
+  zstd/dict_test.go
+  zstd/enc_base.go
+  zstd/encoder_options.go
+  zstd/encoder_options_test.go
+  zstd/snappy_test.go
+  zstd/zstd.go
+  zstd/zstd_test.go
+Copyright:
+    2009-2012 The Go Authors
+    2019      Klaus Post
+License: BSD-3-Clause
+Comment: This code is licensed under the same conditions as the
+ original Go code.
+
+Files: zstd/testdata/*
+Copyright:
+    2009-2012 The Go Authors
+    2019      Klaus Post
+License: BSD-3-Clause
+Comment: This code is licensed under the same conditions as the
+ original Go code.
+
+License: BSD-3-Clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are
+ met:
  .
- This package is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU General Public License for more details.
+    * Redistributions of source code must retain the above copyright
+ notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above
+ copyright notice, this list of conditions and the following disclaimer
+ in the documentation and/or other materials provided with the
+ distribution.
+    * Neither the name of Google Inc. nor the names of its
+ contributors may be used to endorse or promote products derived from
+ this software without specific prior written permission.
  .
- You should have received a copy of the GNU General Public License
- along with this program. If not, see <https://www.gnu.org/licenses/>
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+ A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+ OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+License: Expat
+ This software is Copyright (c) 2020 by X. Ample.
  .
- On Debian systems, the complete text of the GNU General
- Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
+ This is free software, licensed under:
+ .
+   The MIT (X11) License
+ .
+ The MIT License
+ .
+ Permission is hereby granted, free of charge, to any person
+ obtaining a copy of this software and associated
+ documentation files (the "Software"), to deal in the Software
+ without restriction, including without limitation the rights to
+ use, copy, modify, merge, publish, distribute, sublicense,
+ and/or sell copies of the Software, and to permit persons to
+ whom the Software is furnished to do so, subject to the
+ following conditions:
+ .
+ The above copyright notice and this permission notice shall
+ be included in all copies or substantial portions of the
+ Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT
+ WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+ INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR
+ PURPOSE AND NONINFRINGEMENT. IN NO EVENT
+ SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+ LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+ CONNECTION WITH THE SOFTWARE OR THE USE OR
+ OTHER DEALINGS IN THE SOFTWARE.
