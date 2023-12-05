@@ -1,0 +1,107 @@
+From: Dmitry Smirnov <onlyjob@debian.org>
+Date: Tue, 26 Jan 2021 01:20:46 +0800
+Subject: unvendor xxhash
+
+Last-Update: 2019-09-09
+Forwarded: not-needed
+---
+ zstd/blockdec.go     | 2 +-
+ zstd/decoder.go      | 2 +-
+ zstd/decoder_test.go | 2 +-
+ zstd/enc_base.go     | 2 +-
+ zstd/encoder.go      | 2 +-
+ zstd/encoder_test.go | 2 +-
+ zstd/framedec.go     | 2 +-
+ 7 files changed, 7 insertions(+), 7 deletions(-)
+
+Index: compress-1.17.0/zstd/blockdec.go
+===================================================================
+--- compress-1.17.0.orig/zstd/blockdec.go
++++ compress-1.17.0/zstd/blockdec.go
+@@ -16,7 +16,7 @@ import (
+ 	"sync"
+ 
+ 	"github.com/klauspost/compress/huff0"
+-	"github.com/klauspost/compress/zstd/internal/xxhash"
++	"github.com/cespare/xxhash"
+ )
+ 
+ type blockType uint8
+Index: compress-1.17.0/zstd/decoder.go
+===================================================================
+--- compress-1.17.0.orig/zstd/decoder.go
++++ compress-1.17.0/zstd/decoder.go
+@@ -10,7 +10,7 @@ import (
+ 	"io"
+ 	"sync"
+ 
+-	"github.com/klauspost/compress/zstd/internal/xxhash"
++	"github.com/cespare/xxhash"
+ )
+ 
+ // Decoder provides decoding of zstandard streams.
+Index: compress-1.17.0/zstd/decoder_test.go
+===================================================================
+--- compress-1.17.0.orig/zstd/decoder_test.go
++++ compress-1.17.0/zstd/decoder_test.go
+@@ -27,7 +27,7 @@ import (
+ 	// "github.com/DataDog/zstd"
+ 	// zstd "github.com/valyala/gozstd"
+ 
+-	"github.com/klauspost/compress/zstd/internal/xxhash"
++	"github.com/cespare/xxhash"
+ )
+ 
+ func TestNewReaderMismatch(t *testing.T) {
+Index: compress-1.17.0/zstd/enc_base.go
+===================================================================
+--- compress-1.17.0.orig/zstd/enc_base.go
++++ compress-1.17.0/zstd/enc_base.go
+@@ -4,7 +4,7 @@ import (
+ 	"fmt"
+ 	"math/bits"
+ 
+-	"github.com/klauspost/compress/zstd/internal/xxhash"
++	"github.com/cespare/xxhash"
+ )
+ 
+ const (
+Index: compress-1.17.0/zstd/encoder.go
+===================================================================
+--- compress-1.17.0.orig/zstd/encoder.go
++++ compress-1.17.0/zstd/encoder.go
+@@ -12,7 +12,7 @@ import (
+ 	rdebug "runtime/debug"
+ 	"sync"
+ 
+-	"github.com/klauspost/compress/zstd/internal/xxhash"
++	"github.com/cespare/xxhash"
+ )
+ 
+ // Encoder provides encoding to Zstandard.
+Index: compress-1.17.0/zstd/encoder_test.go
+===================================================================
+--- compress-1.17.0.orig/zstd/encoder_test.go
++++ compress-1.17.0/zstd/encoder_test.go
+@@ -17,7 +17,7 @@ import (
+ 	"time"
+ 
+ 	"github.com/klauspost/compress/zip"
+-	"github.com/klauspost/compress/zstd/internal/xxhash"
++	"github.com/cespare/xxhash"
+ )
+ 
+ var testWindowSizes = []int{MinWindowSize, 1 << 16, 1 << 22, 1 << 24}
+Index: compress-1.17.0/zstd/framedec.go
+===================================================================
+--- compress-1.17.0.orig/zstd/framedec.go
++++ compress-1.17.0/zstd/framedec.go
+@@ -10,7 +10,7 @@ import (
+ 	"errors"
+ 	"io"
+ 
+-	"github.com/klauspost/compress/zstd/internal/xxhash"
++	"github.com/cespare/xxhash"
+ )
+ 
+ type frameDec struct {

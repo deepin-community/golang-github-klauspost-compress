@@ -1,5 +1,263 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-github-klauspost-compress (1.17.2+ds1-1) unstable; urgency=medium
 
-  * Initial release
+  * Team upload.
+  * New upstream release 1.17.2
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Reinhard Tartler <siretart@tauware.de>  Thu, 26 Oct 2023 06:32:21 -0400
+
+golang-github-klauspost-compress (1.17.0+ds1-1) unstable; urgency=medium
+
+  * Team upload.
+  * Upload into unstable.
+
+ -- Anton Gladky <gladk@debian.org>  Tue, 03 Oct 2023 03:07:40 +0200
+
+golang-github-klauspost-compress (1.17.0+ds1-1~exp1) experimental; urgency=medium
+
+  * Team upload.
+  * New upstream version 1.17.0+ds1
+  * Refresh patches.
+  * Set upstream metadata fields: Repository-Browse.
+
+ -- Anton Gladky <gladk@debian.org>  Mon, 02 Oct 2023 20:07:24 +0200
+
+golang-github-klauspost-compress (1.15.12+ds1-3) unstable; urgency=medium
+
+  * Team upload.
+  * Fix autopkgtest when installed testdata is mangled
+
+ -- Shengjing Zhu <zhsj@debian.org>  Tue, 17 Jan 2023 13:30:16 +0800
+
+golang-github-klauspost-compress (1.15.12+ds1-2) unstable; urgency=medium
+
+  * Team upload.
+  * Fix autopkgtest failures on armel and armhf.
+    Limit parallel and increase timeout
+  * Update Standards-Version to 4.6.2 (no changes)
+
+ -- Shengjing Zhu <zhsj@debian.org>  Mon, 16 Jan 2023 11:48:43 +0800
+
+golang-github-klauspost-compress (1.15.12+ds1-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * drop deprecated entries in debian/copyright
+  * Standards-Version: 4.6.1
+
+ -- Drew Parsons <dparsons@debian.org>  Wed, 09 Nov 2022 17:10:58 +0100
+
+golang-github-klauspost-compress (1.15.4+ds1-2) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Remove constraints unnecessary since buster
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Mon, 17 Oct 2022 15:18:22 +0100
+
+golang-github-klauspost-compress (1.15.4+ds1-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version 1.15.4+ds1
+
+ -- Reinhard Tartler <siretart@tauware.de>  Sat, 14 May 2022 11:32:04 -0400
+
+golang-github-klauspost-compress (1.13.6+ds1-2) unstable; urgency=medium
+
+  * Team upload
+  * Upload to unstable
+
+ -- Reinhard Tartler <siretart@tauware.de>  Mon, 11 Oct 2021 13:53:00 -0400
+
+golang-github-klauspost-compress (1.13.6+ds1-1) experimental; urgency=medium
+
+  * Team upload
+  * New upstream version: 1.13.6
+
+ -- Reinhard Tartler <siretart@tauware.de>  Sun, 10 Oct 2021 14:19:15 -0400
+
+golang-github-klauspost-compress (1.11.13+ds1-4) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit.
+
+  [ Reinhard Tartler ]
+  * limit concurrency in tests
+  * debian/changelog: update
+
+ -- Reinhard Tartler <siretart@tauware.de>  Sun, 03 Oct 2021 18:40:57 -0400
+
+golang-github-klauspost-compress (1.11.13+ds1-3) unstable; urgency=medium
+
+  * Team upload.
+  * Drop architecture specific test restrictions, instead backport an
+    upstream patch for increasing the test timeout from 2 to 4 minutes,
+    which seems to fix the test failures on at least i386 consistently.
+    cf. https://github.com/klauspost/compress/issues/356
+
+ -- Reinhard Tartler <siretart@tauware.de>  Sat, 02 Oct 2021 09:16:45 -0400
+
+golang-github-klauspost-compress (1.11.13+ds1-2) unstable; urgency=medium
+
+  * Team upload.
+  * Rework armhf exclusion to something that actually works
+
+ -- Reinhard Tartler <siretart@tauware.de>  Tue, 28 Sep 2021 18:23:11 -0400
+
+golang-github-klauspost-compress (1.11.13+ds1-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 1.11.13
+  * Set Multi-Arch: foreign
+  * debian/rules: don't run tests if disabled in DEB_BUILD_OPTIONS
+  * debian/control: Bump standards version, no changes needed
+
+ -- Reinhard Tartler <siretart@tauware.de>  Sun, 26 Sep 2021 11:33:55 -0400
+
+golang-github-klauspost-compress (1.11.7-2) unstable; urgency=medium
+
+  * Team upload.
+  * Skip test on armhf due to out of memory
+
+ -- Shengjing Zhu <zhsj@debian.org>  Wed, 27 Jan 2021 02:42:32 +0800
+
+golang-github-klauspost-compress (1.11.7-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 1.11.7
+  * Drop unused packages from Depends
+  * Update Section to golang
+  * Update Standards-Version to 4.5.1 (no changes)
+  * Exclude s2/cmd when building
+  * Fix copyright
+
+ -- Shengjing Zhu <zhsj@debian.org>  Tue, 26 Jan 2021 01:28:25 +0800
+
+golang-github-klauspost-compress (1.11.3-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 1.11.3
+  * debian/copyright: update using cme update dpkg-copyright
+
+ -- Reinhard Tartler <siretart@tauware.de>  Sat, 21 Nov 2020 17:28:24 -0500
+
+golang-github-klauspost-compress (1.10.11-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * update debian/watch to version 4 format.
+  * debhelper compatibility level 13
+  * debian patch flate_import_fixes.patch ensures fmt is imported in
+    generated inflate_gen.go and io is not.
+
+ -- Drew Parsons <dparsons@debian.org>  Mon, 28 Sep 2020 11:19:33 +0800
+
+golang-github-klauspost-compress (1.9.5-2) unstable; urgency=medium
+
+  * Process debian/control with "cme fix dpkg" which sorts fields
+    and bumps Standards-Version to 4.5.0 (no change)
+  * Update Maintainer email address to team+pkg-go@tracker.debian.org
+  * Add myself to the list of Uploaders
+  * Add "Rules-Requires-Root: no" to debian/control
+  * Simplify debian/rules with Build-Depends: dh-golang (>= 1.31~)
+  * Fix autopkgtest failure by calling dh_strip_nondeterminism with
+    -X/testdata/ to prevent test ZIP files from being mangled
+
+ -- Anthony Fok <foka@debian.org>  Thu, 20 Feb 2020 12:15:11 -0700
+
+golang-github-klauspost-compress (1.9.5-1) unstable; urgency=medium
+
+  * New upstream release
+  * Build with "go generate"
+  * Standards-Version: 4.4.1
+  * golang-go --> golang-any
+  * Added myself to Uploaders
+  * (Build-)Depends:
+    - golang-github-klauspost-crc32-dev
+    + golang-golang-x-tools
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Mon, 30 Dec 2019 17:49:19 +1100
+
+golang-github-klauspost-compress (1.7.6-2) unstable; urgency=medium
+
+  * Team upload.
+  * Remove myself from uploaders.
+
+ -- Alexandre Viau <aviau@debian.org>  Sun, 15 Sep 2019 18:21:35 -0400
+
+golang-github-klauspost-compress (1.7.6-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Standards-Version: 4.4.0.
+  * DH & compat to version 12.
+  * (Build-)Depends:
+    + golang-github-cespare-xxhash-dev (>= 2.1.0~)
+    + golang-github-google-go-cmp-dev
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Mon, 09 Sep 2019 13:29:56 +1000
+
+golang-github-klauspost-compress (1.2.1-5) unstable; urgency=medium
+
+  * Team upload.
+  * Vcs-* urls: pkg-go-team -> go-team.
+
+ -- Alexandre Viau <aviau@debian.org>  Mon, 05 Feb 2018 23:39:26 -0500
+
+golang-github-klauspost-compress (1.2.1-4) unstable; urgency=medium
+
+  * point Vcs-* urls to salsa.d.o subproject
+
+ -- Alexandre Viau <aviau@debian.org>  Thu, 25 Jan 2018 16:21:20 -0500
+
+golang-github-klauspost-compress (1.2.1-3) unstable; urgency=medium
+
+  * Use DH_GOLANG_INSTALL_EXTRA.
+
+ -- Alexandre Viau <aviau@debian.org>  Mon, 22 Jan 2018 14:18:21 -0500
+
+golang-github-klauspost-compress (1.2.1-2) unstable; urgency=medium
+
+  * Move to salsa.debian.org.
+  * Priority extra -> optional.
+
+ -- Alexandre Viau <aviau@debian.org>  Sat, 30 Dec 2017 02:55:57 -0500
+
+golang-github-klauspost-compress (1.2.1-1) unstable; urgency=medium
+
+  * New upstream snapshot.
+  * Standards-Version: 4.0.0.
+  * Set Testsuite to autopkgtest-pkg-go.
+  * Remove unused lintian override.
+
+ -- Alexandre Viau <aviau@debian.org>  Wed, 02 Aug 2017 17:20:47 -0400
+
+golang-github-klauspost-compress (1.0-2) unstable; urgency=medium
+
+  [ Team upload ]
+  * Fix test failures by adding a test-only B-D and copy across
+    extra test fixtures into build directory
+  * Review and update d/copyright
+  * Standards-Version: 3.9.8
+
+ -- Tim Potter <tpot@hpe.com>  Thu, 18 Aug 2016 13:09:45 +1000
+
+golang-github-klauspost-compress (1.0-1) unstable; urgency=medium
+
+  * New upstream version
+  * Added watch file
+  * Replaced Vcs-Git by secure (https) url
+  * Updated copyright info for snappy/*
+
+ -- Alexandre Viau <aviau@debian.org>  Mon, 21 Mar 2016 20:06:59 -0400
+
+golang-github-klauspost-compress (0.0~git20151221.0.2dd54ae-1) unstable; urgency=medium
+
+  * New upstream release
+  * Project relicensed under BSD
+
+ -- Alexandre Viau <aviau@debian.org>  Thu, 17 Dec 2015 11:12:40 -0500
+
+golang-github-klauspost-compress (0.0~git20151214.0.8e31b1a-1) unstable; urgency=medium
+
+  * Initial release (Closes: #807944)
+
+ -- Alexandre Viau <aviau@debian.org>  Mon, 14 Dec 2015 12:22:35 -0500
